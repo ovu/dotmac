@@ -14,3 +14,15 @@ Install git:
 ```bash
 brew install git
 ```
+
+Install python3:
+
+```bash
+brew install python3
+```
+
+Install ansible:
+
+```bash
+pip3 install ansible
+```
