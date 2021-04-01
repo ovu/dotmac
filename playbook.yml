@@ -1,0 +1,9 @@
+---
+
+- hosts: notebooks
+  roles:
+    - {role: navigator}
+    - {role: developer}
+    - {role: haskell}
+    - {role: fish}
+    - {role: git-prompt}

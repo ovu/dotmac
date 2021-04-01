@@ -1,0 +1,6 @@
+---
+
+- name: Install haskell stack
+  community.general.homebrew:
+    name: haskell-stack
+    state: present

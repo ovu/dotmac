@@ -1,0 +1,3 @@
+
+[notebooks]
+omars-macbook-pro.fritz.box ansible_connection=local

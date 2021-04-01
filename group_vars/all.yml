@@ -1,0 +1,5 @@
+---
+
+USER_NAME: "{{ lookup('env', 'USER') }}"
+
+HOME_DIR: "/Users/{{ USER_NAME }}"

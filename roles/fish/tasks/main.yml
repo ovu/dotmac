@@ -1,0 +1,17 @@
+---
+
+- name: Install fish
+  community.general.homebrew:
+    name: fish
+    state: present
+
+- name: Change user shell to fish
+  become: yes
+  user:
+    name: "{{USER_NAME}}"
+    shell: /usr/local/bin/fish
+
+- name: Create fish dir for functions
+  file:
+    path: "{{ HOME_DIR }}/.config/fish/functions"
+    state: directory

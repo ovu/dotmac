@@ -1,0 +1,33 @@
+---
+
+- name: Create dir github/ovu/git-prompt
+  file:
+    path: "{{ HOME_DIR }}/github/ovu/git-prompt"
+    state: directory
+
+- name: Check if git-prompt exists
+  stat:
+    path: "{{ HOME_DIR }}/github/ovu/git-prompt/stack.yaml"
+  register: gitpromptdir
+
+- name: Clone git-prompt
+  git:
+    repo: https://github.com/ovu/git-prompt.git
+    dest: "{{ HOME_DIR }}/github/ovu/git-prompt"
+  when: gitpromptdir.stat.exists == False
+
+- name: Check if git-prompt exe exists
+  stat:
+    path: "{{ HOME_DIR }}/git-prompt-exe"
+  register: gitpromptexe
+
+- name: Build git-prompt
+  shell: stack setup && stack build && cp "$(stack path --local-install-root)/bin/git-prompt-exe" "{{HOME_DIR}}/git-prompt-exe"
+  args:
+    chdir: "{{ HOME_DIR }}/github/ovu/git-prompt"
+  when: gitpromptexe.stat.exists == False
+
+- name: Copy fish config for git-prompt
+  ansible.builtin.copy:
+    src: "{{HOME_DIR}}/github/ovu/git-prompt/fish_prompt.fish"
+    dest: "{{HOME_DIR}}/.config/fish/functions"
