@@ -19,4 +19,9 @@
 - name: copy fish config
   copy:
     src: config.fish
-    dest: /Users/{{ USER_NAME }}/.config/fish/config.fish
+    dest: "{{ HOME_DIR }}/.config/fish/config.fish"
+
+- name: copy custom functions
+  copy:
+    src: functions/
+    dest: "{{HOME_DIR}}/.config/fish/functions/"
