@@ -15,3 +15,8 @@
   file:
     path: "{{ HOME_DIR }}/.config/fish/functions"
     state: directory
+
+- name: copy fish config
+  copy:
+    src: config.fish
+    dest: /Users/{{ USER_NAME }}/.config/fish/config.fish

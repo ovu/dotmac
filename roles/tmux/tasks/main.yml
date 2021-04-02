@@ -1,0 +1,32 @@
+---
+
+- name: Install tmux
+  community.general.homebrew:
+    name: tmux
+    state: present
+
+- name: Install reattach to user namespace
+  community.general.homebrew:
+    name: reattach-to-user-namespace
+    state: present
+
+- name: Install xclip
+  community.general.homebrew:
+    name: xclip
+    state: present
+
+- name: Install powerline
+  pip:
+    name: powerline-status
+    extra_args: --user
+
+- name: copy tmux config
+  copy:
+    src: .tmux.conf
+    dest: /Users/{{ USER_NAME }}/.tmux.conf
+
+# Fonts copied from https://github.com/powerline/fonts
+- name: copy Meslo fonts for tmux
+  copy:
+    src: fonts/Meslo_Dotted
+    dest: /Users/{{ USER_NAME }}/Library/Fonts/

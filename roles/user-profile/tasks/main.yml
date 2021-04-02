@@ -1,0 +1,7 @@
+---
+
+
+- name: copy profile config
+  copy:
+    src: .profile
+    dest: /Users/{{ USER_NAME }}/.profile

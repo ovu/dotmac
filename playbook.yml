@@ -7,3 +7,5 @@
     - {role: haskell}
     - {role: fish}
     - {role: git-prompt}
+    - {role: tmux}
+    - {role: user-profile}
