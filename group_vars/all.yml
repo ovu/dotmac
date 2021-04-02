@@ -3,3 +3,14 @@
 USER_NAME: "{{ lookup('env', 'USER') }}"
 
 HOME_DIR: "/Users/{{ USER_NAME }}"
+
+DEV_PACKAGES:
+  - the_silver_searcher     # AG is the faster alternative to Ack
+  - fuzzy-find              # better than find, search in files and dirs
+  - fzf                     # Fuzzyfinder for the commandline
+  - tig                     # My favorite tool for Git in the terminal
+  - xclip                   # Clipboard usage in the terminal (used by tmux)
+
+USER_PACKAGES:
+  - youtube-dl              # download mp3 and videos from youtube
+  - pass                    # password manager

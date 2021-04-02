@@ -12,3 +12,4 @@
     - {role: vim}
     - {role: git}
     - {role: dev-tools}
+    - {role: user-tools}

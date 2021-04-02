@@ -1,0 +1,6 @@
+---
+
+- name: Install user tools
+  community.general.homebrew:
+    name: "{{USER_PACKAGES}}"
+    state: present

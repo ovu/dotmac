@@ -10,11 +10,6 @@
     name: reattach-to-user-namespace
     state: present
 
-- name: Install xclip
-  community.general.homebrew:
-    name: xclip
-    state: present
-
 - name: Install powerline
   pip:
     name: powerline-status
