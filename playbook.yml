@@ -11,3 +11,4 @@
     - {role: user-profile}
     - {role: vim}
     - {role: git}
+    - {role: dev-tools}

@@ -1,0 +1,6 @@
+---
+
+- name: Install dev tools
+  community.general.homebrew:
+    name: the_silver_searcher,fuzzy-find,fzf
+    state: present
