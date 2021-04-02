@@ -4,3 +4,8 @@
   community.general.homebrew:
     name: "{{USER_PACKAGES}}"
     state: present
+
+- name: Install ui user tools
+  community.general.homebrew_cask:
+    name: tyke
+    state: present
