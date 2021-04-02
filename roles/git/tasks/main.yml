@@ -1,0 +1,6 @@
+---
+
+- name: copy git config
+  copy:
+    src: .gitconfig
+    dest: "{{ HOME_DIR }}/.gitconfig"

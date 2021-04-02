@@ -10,3 +10,4 @@
     - {role: tmux}
     - {role: user-profile}
     - {role: vim}
+    - {role: git}
