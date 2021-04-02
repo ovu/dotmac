@@ -5,6 +5,10 @@ alias g="git"
 set fish_color_command "purple"
 set fish_color_autosuggestion "yellow"
 
+# Set colors for command ls
+# Colors can be customized in https://geoff.greer.fm/lscolors/
+set -Ux LSCOLORS gxfxcxdxBxegxdabagacad
+
 # Required for powerline-config
 set -gx PATH $HOME/Library/Python/3.9/bin $PATH
 # Set env  EDITOR used by git-mediate
