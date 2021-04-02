@@ -1,0 +1,24 @@
+---
+
+# TabNine and NeoComplete requires vim with lua and python
+- name: Install vim (with lua and python3 support)
+  community.general.homebrew:
+    name: vim
+    state: present
+
+- name: Copy vim config
+  copy:
+    src: .vimrc
+    dest: "{{HOME_DIR}}/.vimrc"
+
+- name: Check Vundle is cloned
+  stat:
+    path: "{{HOME_DIR}}/.vim/bundle/Vundle.vim"
+  register: vundledir
+
+- name: Clone Vundle
+  git:
+    repo: https://github.com/VundleVim/Vundle.vim.git 
+    dest: "{{HOME_DIR}}/.vim/bundle/Vundle.vim"
+  when: vundledir.stat.exists == False
+

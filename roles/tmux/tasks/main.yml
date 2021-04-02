@@ -23,10 +23,10 @@
 - name: copy tmux config
   copy:
     src: .tmux.conf
-    dest: /Users/{{ USER_NAME }}/.tmux.conf
+    dest: "{{HOME_DIR}}/.tmux.conf"
 
 # Fonts copied from https://github.com/powerline/fonts
 - name: copy Meslo fonts for tmux
   copy:
     src: fonts/Meslo_Dotted
-    dest: /Users/{{ USER_NAME }}/Library/Fonts/
+    dest: "{{HOME_DIR}}/Library/Fonts/"

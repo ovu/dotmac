@@ -9,3 +9,4 @@
     - {role: git-prompt}
     - {role: tmux}
     - {role: user-profile}
+    - {role: vim}
