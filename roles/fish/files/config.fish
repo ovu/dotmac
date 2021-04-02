@@ -5,6 +5,7 @@ alias g="git"
 set fish_color_command "purple"
 set fish_color_autosuggestion "yellow"
 
+# Required for powerline-config
 set -gx PATH $HOME/Library/Python/3.9/bin $PATH
 # Set env  EDITOR used by git-mediate
 set -gx EDITOR vim
