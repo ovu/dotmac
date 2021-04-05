@@ -13,3 +13,4 @@
     - {role: git}
     - {role: dev-tools}
     - {role: user-tools}
+    - {role: java}

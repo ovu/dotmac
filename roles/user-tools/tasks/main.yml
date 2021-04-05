@@ -7,5 +7,6 @@
 
 - name: Install ui user tools
   community.general.homebrew_cask:
-    name: tyke
+    name: tyke,microsoft-remote-desktop
     state: present
+

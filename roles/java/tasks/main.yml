@@ -1,0 +1,11 @@
+---
+
+- name: Add tap for adoptopenjdk
+  community.general.homebrew_tap:
+    name: adoptopenjdk/openjdk
+
+- name: Install Java8
+  community.general.homebrew_cask:
+    name: adoptopenjdk8
+    state: present
+  ignore_errors: yes 
