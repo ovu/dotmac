@@ -4,3 +4,8 @@
   community.general.homebrew_cask:
     name: intellij-idea-ce
     state: present
+
+- name: copy ideavimrc config
+  copy:
+    src: .ideavimrc
+    dest: "{{ HOME_DIR }}/.ideavimrc"

@@ -1,0 +1,5 @@
+set surround
+set argtextobj
+set exchange
+
+source ~/.vimrc
