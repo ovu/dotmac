@@ -8,4 +8,3 @@
   community.general.homebrew_cask:
     name: adoptopenjdk8
     state: present
-  ignore_errors: yes 

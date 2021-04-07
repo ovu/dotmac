@@ -1,0 +1,18 @@
+---
+
+- name: Add tap for mongodb
+  community.general.homebrew_tap:
+    name: mongodb/brew
+
+- name: Install mongodb ce
+  community.general.homebrew:
+    name: mongodb-community@4.4
+    state: present
+
+- name: Get status of mongodb-community service
+  shell: "brew services list | grep mongodb-community | cut -d ' ' -f 2"
+  register: mongodb_service_stopped
+
+- name: Enable brew services mongodb-community when stopped
+  command: "brew services start mongodb-community@4.4"
+  when: "'stopped' in mongodb_service_stopped.stdout"
