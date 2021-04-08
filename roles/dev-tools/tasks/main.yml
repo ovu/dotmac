@@ -4,3 +4,8 @@
   community.general.homebrew:
     name: "{{DEV_PACKAGES}}"
     state: present
+
+- name: Install dev cask tools
+  community.general.homebrew_cask:
+    name: "{{DEV_CASK_PACKAGES}}"
+    state: present

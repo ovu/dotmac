@@ -11,6 +11,9 @@ DEV_PACKAGES:
   - tig                     # My favorite tool for Git in the terminal
   - xclip                   # Clipboard usage in the terminal (used by tmux)
 
+DEV_CASK_PACKAGES:
+  - docker             
+
 USER_PACKAGES:
   - youtube-dl              # download mp3 and videos from youtube
   - pass                    # password manager

@@ -16,3 +16,8 @@
 - name: Enable brew services mongodb-community when stopped
   command: "brew services start mongodb-community@4.4"
   when: "'stopped' in mongodb_service_stopped.stdout"
+
+- name: Install robo 3t client for mongodb
+  community.general.homebrew_cask:
+    name: robo-3t
+    state: present
