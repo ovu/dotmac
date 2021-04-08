@@ -1,0 +1,10 @@
+---
+
+- name: Check if git-mediate is installed
+  stat:
+    path: "{{ HOME_DIR }}/.local/bin/git-mediate"
+  register: git_mediate
+
+- name: Install git-mediate
+  shell: "stack install git-mediate"
+  when: git_mediate.stat.exists == False

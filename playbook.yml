@@ -11,6 +11,7 @@
     - {role: user-profile}
     - {role: vim}
     - {role: git}
+    - {role: git-mediate}
     - {role: dev-tools}
     - {role: user-tools}
     - {role: java}
