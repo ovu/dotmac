@@ -10,10 +10,17 @@ DEV_PACKAGES:
   - fzf                     # Fuzzyfinder for the commandline
   - tig                     # My favorite tool for Git in the terminal
   - xclip                   # Clipboard usage in the terminal (used by tmux)
+  - autossh                 # Monitors and restart ssh sessions
 
 DEV_CASK_PACKAGES:
   - docker             
 
 USER_PACKAGES:
   - youtube-dl              # download mp3 and videos from youtube
+  - ffmpeg                  # required by youtube-dl to convert audio to mp3
   - pass                    # password manager
+
+USER_UI_TOOLS:
+  - elmedia-player          # Player for mp4 files
+  - tyke                    # Tool for taking notes
+  - microsoft-remote-desktop
