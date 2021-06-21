@@ -24,3 +24,4 @@ USER_UI_TOOLS:
   - elmedia-player          # Player for mp4 files
   - tyke                    # Tool for taking notes
   - microsoft-remote-desktop
+  - android-file-transfer
