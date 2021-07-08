@@ -19,9 +19,14 @@ USER_PACKAGES:
   - youtube-dl              # download mp3 and videos from youtube
   - ffmpeg                  # required by youtube-dl to convert audio to mp3
   - pass                    # password manager
+  - mp3gain                 # Lossless mp3 normalizer with statistical analysis
+  - sox                     # SOund eXchange: universal sound sample translator
+
+
 
 USER_UI_TOOLS:
   - elmedia-player          # Player for mp4 files
   - tyke                    # Tool for taking notes
   - microsoft-remote-desktop
   - android-file-transfer
+  - skype                   # why not
