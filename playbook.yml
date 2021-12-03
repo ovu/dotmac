@@ -16,3 +16,4 @@
     - {role: user-tools}
     - {role: java}
     - {role: mongodb}
+    - {role: scala}

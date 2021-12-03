@@ -15,6 +15,9 @@ set -gx PATH $HOME/Library/Python/3.9/bin $PATH
 # Required for git-mediate
 set -gx PATH $HOME/.local/bin $PATH
 
+# Required for scala installer (coursier)
+set -gx PATH $HOME/Library/Application\ Support/Coursier/bin $PATH
+
 # Set env  EDITOR used by git-mediate
 set -gx EDITOR vim
 export LC_ALL=en_US.UTF-8

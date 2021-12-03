@@ -1,0 +1,4 @@
+---
+
+- name: Install scala tools
+  shell: cs setup

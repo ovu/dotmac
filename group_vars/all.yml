@@ -11,6 +11,7 @@ DEV_PACKAGES:
   - tig                     # My favorite tool for Git in the terminal
   - xclip                   # Clipboard usage in the terminal (used by tmux)
   - autossh                 # Monitors and restart ssh sessions
+  - htop                    # Process viewwer real time
 
 DEV_CASK_PACKAGES:
   - docker             
