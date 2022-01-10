@@ -23,15 +23,8 @@ brew install python3
 
 Install ansible:
 
-Update pip3:
-
 ```bash
-/Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip
-```
-
-Try first without the version. The version was used to avoid an issue related to the Rust compiler.
-```bash
-pip3 install ansible==2.10.7
+brew install ansible
 ```
 
 Enable ssh on mac:
