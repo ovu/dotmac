@@ -9,7 +9,7 @@
   become: yes
   user:
     name: "{{USER_NAME}}"
-    shell: /usr/local/bin/fish
+    shell: /opt/homebrew/bin/fish
 
 - name: Create fish dir for functions
   file:

@@ -10,10 +10,16 @@ set fish_color_autosuggestion "yellow"
 set -Ux LSCOLORS gxfxcxdxBxegxdabagacad
 
 # Required for powerline-config
-set -gx PATH $HOME/Library/Python/3.9/bin $PATH
+set -gx PATH $HOME/Library/Python/3.8/bin $PATH
 
 # Required for git-mediate
 set -gx PATH $HOME/.local/bin $PATH
+
+# Required for tmux and other tools installed with brew
+set -gx PATH /opt/homebrew/bin $PATH
+
+# opt is required to compile with stack
+set -gx PATH /opt/homebrew/opt/llvm@12/bin $PATH
 
 # Required for scala installer (coursier)
 set -gx PATH $HOME/Library/Application\ Support/Coursier/bin $PATH
