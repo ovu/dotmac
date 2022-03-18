@@ -12,9 +12,11 @@ DEV_PACKAGES:
   - xclip                   # Clipboard usage in the terminal (used by tmux)
   - autossh                 # Monitors and restart ssh sessions
   - htop                    # Process viewwer real time
+  - maven
 
 DEV_CASK_PACKAGES:
   - docker             
+  - hammerspoon             # UI Automation with lua
 
 USER_PACKAGES:
   - youtube-dl              # download mp3 and videos from youtube

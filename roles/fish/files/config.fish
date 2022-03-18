@@ -24,6 +24,10 @@ set -gx PATH /opt/homebrew/opt/llvm@12/bin $PATH
 # Required for scala installer (coursier)
 set -gx PATH $HOME/Library/Application\ Support/Coursier/bin $PATH
 
+set -gx IVY_HOME $HOME/.ivy
+
+set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+
 # Set env  EDITOR used by git-mediate
 set -gx EDITOR vim
 export LC_ALL=en_US.UTF-8

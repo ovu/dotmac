@@ -1,0 +1,6 @@
+---
+
+- name: copy hammerspool scripts
+  copy:
+    src: init.lua
+    dest: "{{ HOME_DIR }}/.hammerspoon/init.lua"

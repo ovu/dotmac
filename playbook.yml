@@ -2,7 +2,7 @@
 
 - hosts: notebooks
   roles:
-    # - {role: navigator}
+    - {role: navigator}
     - {role: developer}
     - {role: haskell}
     - {role: fish}
@@ -11,9 +11,10 @@
     - {role: user-profile}
     - {role: vim}
     - {role: git}
-      #    - {role: git-mediate}
+    - {role: git-mediate}
     - {role: dev-tools}
     - {role: user-tools}
+    - {role: hammerspoon}
 #    - {role: java}
 #    Java download and install from: https://www.azul.com/downloads/?os=macos&architecture=arm-64-bit&package=jdk#download-openjdk
 #    - {role: mongodb}
