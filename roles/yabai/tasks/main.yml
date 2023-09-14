@@ -1,8 +1,14 @@
 ---
+
+- name: Create yabai dir
+  file:
+    path: "{{ HOME_DIR }}/.config/yabai/yabairc"
+    state: directory
+
 - name: copy yabai scripts
   copy:
     src: yabairc
     dest: "{{ HOME_DIR }}/.config/yabai/yabairc"
 
-- name: restart yabai service
-  shell: "yabai --restart-service"
+- name: start yabai service
+  shell: "yabai --start-service"

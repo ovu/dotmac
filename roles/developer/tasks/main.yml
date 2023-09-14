@@ -1,9 +1,9 @@
 ---
 
-- name: Install IntelliJ CE
-  community.general.homebrew_cask:
-    name: intellij-idea-ce
-    state: present
+# - name: Install IntelliJ CE
+#   community.general.homebrew_cask:
+#     name: intellij-idea-ce
+#     state: present
 
 - name: copy ideavimrc config
   copy:

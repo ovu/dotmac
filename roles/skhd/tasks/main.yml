@@ -1,9 +1,14 @@
 ---
 
+- name: Create skhd dir
+  file:
+    path: "{{ HOME_DIR }}/.config/skhd/skhdrc"
+    state: directory
+
 - name: copy skhd scripts
   copy:
     src: skhdrc
     dest: "{{ HOME_DIR }}/.config/skhd/skhdrc"
 
-- name: restart skhd service
-  shell: "skhd --restart-service"
+- name: start skhd service
+  shell: "skhd --start-service"

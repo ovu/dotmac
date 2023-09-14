@@ -2,7 +2,7 @@
 
 - hosts: notebooks
   roles:
-    - {role: navigator}
+    # - {role: navigator}
     - {role: developer}
     - {role: haskell}
     - {role: fish}
