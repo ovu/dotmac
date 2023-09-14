@@ -1,0 +1,9 @@
+---
+
+- name: copy skhd scripts
+  copy:
+    src: skhdrc
+    dest: "{{ HOME_DIR }}/.config/skhd/skhdrc"
+
+- name: restart skhd service
+  shell: "skhd --restart-service"

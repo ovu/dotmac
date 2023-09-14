@@ -1,5 +1,4 @@
 ---
-
 - name: copy hammerspool scripts
   copy:
     src: init.lua

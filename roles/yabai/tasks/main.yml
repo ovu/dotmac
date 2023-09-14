@@ -1,0 +1,8 @@
+---
+- name: copy yabai scripts
+  copy:
+    src: yabairc
+    dest: "{{ HOME_DIR }}/.config/yabai/yabairc"
+
+- name: restart yabai service
+  shell: "yabai --restart-service"
