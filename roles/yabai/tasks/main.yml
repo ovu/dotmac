@@ -2,7 +2,7 @@
 
 - name: Create yabai dir
   file:
-    path: "{{ HOME_DIR }}/.config/yabai/yabairc"
+    path: "{{ HOME_DIR }}/.config/yabai"
     state: directory
 
 - name: copy yabai scripts

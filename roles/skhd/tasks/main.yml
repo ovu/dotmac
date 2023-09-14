@@ -2,7 +2,7 @@
 
 - name: Create skhd dir
   file:
-    path: "{{ HOME_DIR }}/.config/skhd/skhdrc"
+    path: "{{ HOME_DIR }}/.config/skhd"
     state: directory
 
 - name: copy skhd scripts
