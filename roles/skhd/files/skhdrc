@@ -21,7 +21,10 @@ shift + alt - x : yabai -m space --mirror x-axis
 shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # maximize a window
-shift + alt - m : yabai -m window --toggle zoom-fullscreen
+cmd - m : yabai -m window --toggle zoom-fullscreen
+
+# Go to the next window and maximize it
+shift + alt - n : if [[ $(yabai -m query --spaces --display | jq '.[-1]."has-focus"') == "false"  ]]; then yabai -m window --space next && yabai -m space --focus next; fi
 
 # balance out tree of windows (resize to occupy same area)
 shift + alt - e : yabai -m space --balance
@@ -62,5 +65,30 @@ ctrl + alt - r : brew services restart yabai
 
 # open notes
 
-alt - return : open /System/Applications/Notes.app
+ctrl + alt - return : open /System/Applications/Notes.app
+
+# Min current window and change to the next one maximized
+cmd - k : yabai -m window --toggle zoom-fullscreen; yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key - 1) % length] | .id'); yabai -m window --toggle zoom-fullscreen
+
+# Move to the next window
+cmd + crtl - j : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key + 1) % length] | .id')
+# Move to the previous window
+cmd + ctrl - k : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key - 1) % length] | .id')
+
+# Arrow Keys
+fn - h : skhd -k "left"
+fn - j : skhd -k "down"
+fn - k : skhd -k "up"
+fn - l : skhd -k "right"
+
+# Parenthesis
+fn - u : skhd -k "shift - 0x19"
+fn - i : skhd -k "shift - 0x1D"
+
+# Curly braces
+fn + shift - u : skhd -k "shift - 0x21"
+fn + shift - i : skhd -k "shift - 0x1E"
+
+# equal
+fn - m : skhd -k "0x18"
 
