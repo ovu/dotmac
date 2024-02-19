@@ -5,8 +5,8 @@ alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus east
 
 #change focus between external displays (left and right)
-alt - s: yabai -m display --focus west
-alt - g: yabai -m display --focus east
+cmd + alt - h: yabai -m display --focus west
+cmd + alt - l: yabai -m display --focus east
 
 # rotate layout clockwise
 shift + alt - r : yabai -m space --rotate 270
@@ -68,27 +68,27 @@ ctrl + alt - r : brew services restart yabai
 ctrl + alt - return : open /System/Applications/Notes.app
 
 # Min current window and change to the next one maximized
-cmd - k : yabai -m window --toggle zoom-fullscreen; yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key - 1) % length] | .id'); yabai -m window --toggle zoom-fullscreen
+cmd - l : yabai -m window --toggle zoom-fullscreen; yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key - 1) % length] | .id'); yabai -m window --toggle zoom-fullscreen
 
-# Move to the next window
-cmd + crtl - j : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key + 1) % length] | .id')
-# Move to the previous window
-cmd + ctrl - k : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key - 1) % length] | .id')
+# # Move to the next window
+# cmd + crtl - j : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key + 1) % length] | .id')
+# # Move to the previous window
+# cmd + ctrl - k : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key - 1) % length] | .id')
 
-# Arrow Keys
-fn - h : skhd -k "left"
-fn - j : skhd -k "down"
-fn - k : skhd -k "up"
-fn - l : skhd -k "right"
+# # Arrow Keys
+# fn - h : skhd -k "left"
+# fn - j : skhd -k "down"
+# fn - k : skhd -k "up"
+# fn - l : skhd -k "right"
 
-# Parenthesis
-fn - u : skhd -k "shift - 0x19"
-fn - i : skhd -k "shift - 0x1D"
+# # Parenthesis
+# fn - u : skhd -k "shift - 0x19"
+# fn - i : skhd -k "shift - 0x1D"
 
-# Curly braces
-fn + shift - u : skhd -k "shift - 0x21"
-fn + shift - i : skhd -k "shift - 0x1E"
+# # Curly braces
+# fn + shift - u : skhd -k "shift - 0x21"
+# fn + shift - i : skhd -k "shift - 0x1E"
 
-# equal
-fn - m : skhd -k "0x18"
+# # equal
+# fn - m : skhd -k "0x18"
 
