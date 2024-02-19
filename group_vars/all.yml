@@ -19,7 +19,7 @@ DEV_PACKAGES:
 
 DEV_CASK_PACKAGES:
   - docker             
-  - hammerspoon             # UI Automation with lua
+  - karabiner-elements      # keyboard automation for mac
 
 USER_PACKAGES:
   - youtube-dl              # download mp3 and videos from youtube
