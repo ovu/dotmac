@@ -15,6 +15,7 @@ DEV_PACKAGES:
   - maven
   - koekeishiya/formulae/yabai
   - koekeishiya/formulae/skhd
+  - jq                      # json parson, used by skhd scripts
 
 DEV_CASK_PACKAGES:
   - docker             
