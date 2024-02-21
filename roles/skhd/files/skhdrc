@@ -5,8 +5,8 @@ alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus east
 
 #change focus between external displays (left and right)
-shift + alt - h: yabai -m display --focus west
-shift + alt - l: yabai -m display --focus east
+cmd + alt - h: yabai -m display --focus west
+cmd + alt - l: yabai -m display --focus east
 
 # rotate layout clockwise
 shift + alt - r : yabai -m space --rotate 270
@@ -30,16 +30,16 @@ shift + alt - n : if [[ $(yabai -m query --spaces --display | jq '.[-1]."has-foc
 shift + alt - e : yabai -m space --balance
 
 # swap windows
-# shift + alt - j : yabai -m window --swap south
-# shift + alt - k : yabai -m window --swap north
-# shift + alt - h : yabai -m window --swap west
-# shift + alt - l : yabai -m window --swap east
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - h : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
 
 # move window and split
-ctrl + alt - j : yabai -m window --warp south
-ctrl + alt - k : yabai -m window --warp north
-ctrl + alt - h : yabai -m window --warp west
-ctrl + alt - l : yabai -m window --warp east
+# ctrl + alt - j : yabai -m window --warp south
+# ctrl + alt - k : yabai -m window --warp north
+# ctrl + alt - h : yabai -m window --warp west
+# ctrl + alt - l : yabai -m window --warp east
 
 # move window to display left and right
 shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
@@ -75,20 +75,25 @@ cmd - l : yabai -m window --toggle zoom-fullscreen; yabai -m window --focus $(ya
 # # Move to the previous window
 # cmd + ctrl - k : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value."has-focus") | .key - 1) % length] | .id')
 
-# Arrow Keys
-rctrl - h : skhd -k "left"
-rctrl - j : skhd -k "down"
-rctrl - k : skhd -k "up"
-rctrl - l : skhd -k "right"
+# # Arrow Keys
+# rctrl - h : skhd -k "left"
+# rctrl - j : skhd -k "down"
+# rctrl - k : skhd -k "up"
+# rctrl - l : skhd -k "right"
 
-# Parenthesis
+# rctrl + alt - h : skhd -k "alt - 0x7B"
+# rctrl + alt - j : skhd -k "alt - down"
+# rctrl + alt - k : skhd -k "alt - up"
+# rctrl + alt - l : skhd -k "alt - 0x7C"
+
+# # Parenthesis
 rctrl - u : skhd -k "shift - 0x19"
 rctrl - i : skhd -k "shift - 0x1D"
 
-# Curly braces
+# # Curly braces
 rctrl + shift - u : skhd -k "shift - 0x21"
 rctrl + shift - i : skhd -k "shift - 0x1E"
 
-# equal
+# # equal
 rctrl - m : skhd -k "0x18"
 
