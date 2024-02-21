@@ -1,0 +1,12 @@
+
+---
+
+- name: Create karabiner dir
+  file:
+    path: "{{ HOME_DIR }}/.config/karabiner"
+    state: directory
+
+- name: copy karabiner scripts
+  copy:
+    src: karabiner.json
+    dest: "{{ HOME_DIR }}/.config/karabiner/karabiner.json"
