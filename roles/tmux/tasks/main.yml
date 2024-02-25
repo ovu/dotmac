@@ -25,3 +25,8 @@
   copy:
     src: fonts/Meslo_Dotted
     dest: "{{HOME_DIR}}/Library/Fonts/"
+
+- name: copy CascadiaMono nerd fonts
+  copy:
+    src: fonts/CascadiaMono
+    dest: "{{HOME_DIR}}/Library/Fonts/"
