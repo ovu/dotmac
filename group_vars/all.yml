@@ -16,6 +16,7 @@ DEV_PACKAGES:
   - koekeishiya/formulae/yabai
   - koekeishiya/formulae/skhd
   - jq                      # json parson, used by skhd scripts
+  - coreutils               # installs gls, a ls with colors
 
 DEV_CASK_PACKAGES:
   - docker             
