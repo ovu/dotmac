@@ -1,0 +1,11 @@
+---
+
+- name: Install neovim
+  community.general.homebrew:
+    name: neovim
+    state: present
+
+- name: copy config files
+  copy:
+    src: nvim/
+    dest: "{{HOME_DIR}}/.config/nvim/"

@@ -11,3 +11,7 @@
   #Setup scala manually: cs setup
   #Do not add Coursier PATH to ~/.profile.
   #It is added in fish config
+
+
+- name: setup coursier
+  shell: "cs setup"

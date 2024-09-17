@@ -17,10 +17,16 @@ DEV_PACKAGES:
   - koekeishiya/formulae/skhd
   - jq                      # json parson, used by skhd scripts
   - coreutils               # installs gls, a ls with colors
+  - ripgrep                 # used in neovim
+  - fd                      # used in neovim, better finder
+  - lazygit                 # used in neovim
+
+
 
 DEV_CASK_PACKAGES:
   - docker             
   - karabiner-elements      # keyboard automation for mac
+  - kitty                   # GNU based terminal emulator
 
 USER_PACKAGES:
   - youtube-dl              # download mp3 and videos from youtube
