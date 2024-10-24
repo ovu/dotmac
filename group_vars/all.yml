@@ -20,6 +20,7 @@ DEV_PACKAGES:
   - ripgrep                 # used in neovim
   - fd                      # used in neovim, better finder
   - lazygit                 # used in neovim
+  - font-fira-code          # nice font
 
 
 
