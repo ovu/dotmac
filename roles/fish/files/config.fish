@@ -1,6 +1,7 @@
 alias v="vim"
 alias x="exit"
 alias g="git"
+alias n="nvim"
 
 set fish_color_command "purple"
 set fish_color_autosuggestion "yellow"
@@ -25,7 +26,7 @@ set -gx PATH $HOME/Library/Application\ Support/Coursier/bin $PATH
 
 set -gx IVY_HOME $HOME/.ivy
 
-set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+set -gx JAVA_HOME /opt/homebrew/Cellar/openjdk/22.0.2/bin/
 
 # Set env  EDITOR used by git-mediate
 set -gx EDITOR vim
