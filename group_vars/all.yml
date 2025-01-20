@@ -21,6 +21,8 @@ DEV_PACKAGES:
   - fd                      # used in neovim, better finder
   - lazygit                 # used in neovim
   - font-fira-code          # nice font
+  - eza                     # better ls
+  - bat                     # better cat  
 
 
 
@@ -28,6 +30,7 @@ DEV_CASK_PACKAGES:
   - docker             
   - karabiner-elements      # keyboard automation for mac
   - kitty                   # GNU based terminal emulator
+  - nikitabobko/tap/aerospace # Better window manager
 
 USER_PACKAGES:
   - youtube-dl              # download mp3 and videos from youtube

@@ -1,0 +1,27 @@
+
+---
+
+- name: Create kitty dir
+  file:
+    path: "{{ HOME_DIR }}/.config/kitty"
+    state: directory
+
+- name: copy kitty config files
+  copy:
+    src: kitty.conf
+    dest: "{{ HOME_DIR }}/.config/kitty/kitty.conf"
+
+- name: copy kitty theme files
+  copy:
+    src: current-theme.conf
+    dest: "{{ HOME_DIR }}/.config/kitty/current-theme.conf"
+
+- name: copy cyberdream theme files
+  copy:
+    src: cyberdream.conf
+    dest: "{{ HOME_DIR }}/.config/kitty/cyberdream.conf"
+
+- name: copy background theme files
+  copy:
+    src: bg-blurred-darker.png
+    dest: "{{ HOME_DIR }}/.config/kitty/bg-blurred-darker.png"
