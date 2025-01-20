@@ -1,0 +1,12 @@
+---
+
+- name: Create aerospace dir
+  file:
+    path: "{{ HOME_DIR }}/.config/aerospace"
+    state: directory
+
+- name: copy aerospace config
+  copy:
+    src: aerospace.toml
+    dest: "{{ HOME_DIR }}/.config/aerospace/aerospace.toml"
+

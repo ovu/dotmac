@@ -19,6 +19,8 @@
     - {role: skhd}
     - {role: karabiner}
     - {role: neovim}
+    - {role: aerospace}
+    - {role: kitty}
 #    - {role: java}
 #    Java download and install from: https://www.azul.com/downloads/?os=macos&architecture=arm-64-bit&package=jdk#download-openjdk
 #    - {role: mongodb}
