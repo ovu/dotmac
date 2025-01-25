@@ -23,6 +23,7 @@ DEV_PACKAGES:
   - font-fira-code          # nice font
   - eza                     # better ls
   - bat                     # better cat  
+  - zoxide                  # better cd
 
 
 

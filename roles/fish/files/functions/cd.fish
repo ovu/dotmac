@@ -1,7 +1,8 @@
 function cd --description 'Change directory'
 	# Skip history in subshells
     if builtin status --is-command-substitution
-        builtin cd $argv
+        # builtin cd $argv
+        z $argv
         return $status
     end
 
@@ -17,7 +18,8 @@ function cd --description 'Change directory'
         return $status
     end
 
-    builtin cd $argv[1]
+    # builtin cd $argv[1]
+    z $argv
     set -l cd_status $status
 
     if test $cd_status = 0 -a "$PWD" != "$previous"
