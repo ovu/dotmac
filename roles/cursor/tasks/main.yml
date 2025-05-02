@@ -1,0 +1,46 @@
+---
+
+- name: Create cursor config directory
+  file:
+    path: "{{ HOME_DIR }}/.cursor"
+    state: directory
+
+- name: Create Cursor User directory
+  file:
+    path: "{{ HOME_DIR }}/Library/Application Support/Cursor/User"
+    state: directory
+
+- name: Create Cursor globalStorage directory
+  file:
+    path: "{{ HOME_DIR }}/Library/Application Support/Cursor/User/globalStorage"
+    state: directory
+
+- name: Copy cursor config files
+  copy:
+    src: "{{ item }}"
+    dest: "{{ HOME_DIR }}/.cursor/{{ item }}"
+  with_fileglob:
+    - "*.json"
+    - "*.yaml"
+    - "*.yml"
+    - "*.conf"
+    - "extensions/*"
+
+- name: Copy Cursor settings files
+  copy:
+    src: "{{ item }}"
+    dest: "{{ HOME_DIR }}/Library/Application Support/Cursor/User/{{ item }}"
+  with_fileglob:
+    - "settings.json"
+    - "keybindings.json"
+
+- name: Copy Cursor extension settings
+  copy:
+    src: storage.json
+    dest: "{{ HOME_DIR }}/Library/Application Support/Cursor/User/globalStorage/storage.json"
+
+- name: Install Cursor extensions
+  command: cursor --install-extension {{ item }}
+  args:
+    creates: "{{ HOME_DIR }}/.cursor/extensions/{{ item }}"
+  with_lines: cat extensions.txt 

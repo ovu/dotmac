@@ -1,0 +1,10 @@
+alefragnani.bookmarks
+bartoszmaka95.onedark
+chaitanyashahare.lazygit
+donjayamanne.githistory
+eamodio.gitlens
+pkief.material-icon-theme
+scala-lang.scala
+scalameta.metals
+tompollak.lazygit-vscode
+vscodevim.vim
