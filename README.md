@@ -38,3 +38,9 @@ Enable ssh on mac:
 4. Click the + under the box. ...
 
 5. You should now see Administrator listed in the box.
+
+Run ansile playbook:
+```bash
+ ansible-playbook playbook.yml -K
+
+```
