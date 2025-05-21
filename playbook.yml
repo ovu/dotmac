@@ -19,7 +19,7 @@
     - {role: skhd}
     - {role: karabiner}
     - {role: neovim}
-    - {role: aerospace}
+    # - {role: aerospace}
     - {role: kitty}
     - {role: cursor}
 #    - {role: java}
