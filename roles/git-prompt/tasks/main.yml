@@ -7,7 +7,7 @@
 
 - name: Check if git-prompt exists
   stat:
-    path: "{{ HOME_DIR }}/github/ovu/git-prompt/stack.yaml"
+    path: "{{ HOME_DIR }}/github/ovu/git-prompt/gitstatus.py"
   register: gitpromptdir
 
 - name: Clone git-prompt
@@ -18,16 +18,21 @@
 
 - name: Check if git-prompt exe exists
   stat:
-    path: "{{ HOME_DIR }}/git-prompt-exe"
+    path: "{{ HOME_DIR }}/gitstatus.py"
   register: gitpromptexe
 
-- name: Build git-prompt
-  shell: stack setup && stack build && cp "$(stack path --local-install-root)/bin/git-prompt-exe" "{{HOME_DIR}}/git-prompt-exe"
-  args:
-    chdir: "{{ HOME_DIR }}/github/ovu/git-prompt"
-  when: gitpromptexe.stat.exists == False
+# - name: Build git-prompt
+#   shell: stack setup && stack build && cp "$(stack path --local-install-root)/bin/git-prompt-exe" "{{HOME_DIR}}/git-prompt-exe"
+#   args:
+#     chdir: "{{ HOME_DIR }}/github/ovu/git-prompt"
+#   when: gitpromptexe.stat.exists == False
 
 - name: Copy fish config for git-prompt
   ansible.builtin.copy:
     src: "{{HOME_DIR}}/github/ovu/git-prompt/fish_prompt.fish"
     dest: "{{HOME_DIR}}/.config/fish/functions"
+
+- name: Make gitstatus file executable
+  file:
+    path: "{{ HOME_DIR}}/gitstatus.py"
+    mode: u+x
