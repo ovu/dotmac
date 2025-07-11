@@ -31,7 +31,7 @@ DEV_CASK_PACKAGES:
   - docker             
   - karabiner-elements      # keyboard automation for mac
   - kitty                   # GNU based terminal emulator
-  - nikitabobko/tap/aerospace # Better window manager
+  # - nikitabobko/tap/aerospace # Better window manager
 
 USER_PACKAGES:
   - youtube-dl              # download mp3 and videos from youtube

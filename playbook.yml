@@ -4,7 +4,7 @@
   roles:
     # - {role: navigator}
     - {role: developer}
-    - {role: haskell}
+    # - {role: haskell}
     - {role: fish}
     - {role: git-prompt}
     - {role: tmux}
@@ -25,4 +25,4 @@
 #    - {role: java}
 #    Java download and install from: https://www.azul.com/downloads/?os=macos&architecture=arm-64-bit&package=jdk#download-openjdk
 #    - {role: mongodb}
-#    - {role: scala}
+   - {role: scala} # It will install java
