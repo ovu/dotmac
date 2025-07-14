@@ -15,6 +15,7 @@
     ],
     "vim.handleKeys": {
         "<Esc>": true
-    }
+    },
+    "files.autoSave": "afterDelay"
     
 }
