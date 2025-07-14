@@ -23,7 +23,7 @@ shift + alt - t : yabai -m config top_padding 70
 shift + alt - y : yabai -m config top_padding 12
 
 # maximize a window
-cmd - m : yabai -m window --toggle zoom-fullscreen
+# cmd - m : yabai -m window --toggle zoom-fullscreen
 
 # Go to the next window and maximize it
 shift + alt - n : if [[ $(yabai -m query --spaces --display | jq '.[-1]."has-focus"') == "false"  ]]; then yabai -m window --space next && yabai -m space --focus next; fi
