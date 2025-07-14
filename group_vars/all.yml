@@ -13,7 +13,7 @@ DEV_PACKAGES:
   - autossh                 # Monitors and restart ssh sessions
   - htop                    # Process viewwer real time
   - maven
-  - koekeishiya/formulae/yabai
+  # - koekeishiya/formulae/yabai # Mac has now a better tailing window
   - koekeishiya/formulae/skhd
   - jq                      # json parson, used by skhd scripts
   - coreutils               # installs gls, a ls with colors

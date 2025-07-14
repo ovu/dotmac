@@ -12,13 +12,15 @@ cmd + ctrl - l : yabai -m display --focus east
 shift + alt - r : yabai -m space --rotate 270
 
 # flip along y-axis
-shift + alt - y : yabai -m space --mirror y-axis
+# shift + alt - y : yabai -m space --mirror y-axis
 
 # flip along x-axis
 shift + alt - x : yabai -m space --mirror x-axis
 
 # toggle window float
-shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+# shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+shift + alt - t : yabai -m config top_padding 70
+shift + alt - y : yabai -m config top_padding 12
 
 # maximize a window
 cmd - m : yabai -m window --toggle zoom-fullscreen
@@ -57,6 +59,9 @@ shift + alt - 4 : yabai -m window --space 4;
 shift + alt - 5 : yabai -m window --space 5;
 shift + alt - 6 : yabai -m window --space 6;
 shift + alt - 7 : yabai -m window --space 7;
+shift + alt - 8 : yabai -m window --space 8;
+shift + alt - 9 : yabai -m window --space 9;
+shift + alt - 0 : yabai -m window --space 10;
 
 # stop/start/restart yabai
 ctrl + alt - q : brew services stop yabai
