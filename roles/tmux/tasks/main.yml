@@ -30,3 +30,7 @@
   copy:
     src: fonts/CascadiaMono
     dest: "{{HOME_DIR}}/Library/Fonts/"
+
+# TODO:
+# - [ ] Add tmux plugin manager
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

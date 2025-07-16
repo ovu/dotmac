@@ -32,6 +32,11 @@
     src: "{{HOME_DIR}}/github/ovu/git-prompt/fish_prompt.fish"
     dest: "{{HOME_DIR}}/.config/fish/functions"
 
+- name: Copy gitstatus
+  ansible.builtin.copy:
+    src: "{{HOME_DIR}}/github/ovu/git-prompt/gitstatus.py"
+    dest: "{{HOME_DIR}}/"
+
 - name: Make gitstatus file executable
   file:
     path: "{{ HOME_DIR}}/gitstatus.py"

@@ -13,8 +13,7 @@ DEV_PACKAGES:
   - autossh                 # Monitors and restart ssh sessions
   - htop                    # Process viewwer real time
   - maven
-  # - koekeishiya/formulae/yabai # Mac has now a better tailing window
-  - koekeishiya/formulae/skhd
+  - "koekeishiya/formulae/skhd"
   - jq                      # json parson, used by skhd scripts
   - coreutils               # installs gls, a ls with colors
   - ripgrep                 # used in neovim
@@ -31,10 +30,8 @@ DEV_CASK_PACKAGES:
   - docker             
   - karabiner-elements      # keyboard automation for mac
   - kitty                   # GNU based terminal emulator
-  # - nikitabobko/tap/aerospace # Better window manager
 
 USER_PACKAGES:
-  - youtube-dl              # download mp3 and videos from youtube
   - ffmpeg                  # required by youtube-dl to convert audio to mp3
   - pass                    # password manager
   - mp3gain                 # Lossless mp3 normalizer with statistical analysis
@@ -45,6 +42,4 @@ USER_PACKAGES:
 USER_UI_TOOLS:
   - elmedia-player          # Player for mp4 files
   - tyke                    # Tool for taking notes
-  - microsoft-remote-desktop
   - android-file-transfer
-  - skype                   # why not
