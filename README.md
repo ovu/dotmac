@@ -44,3 +44,14 @@ Run ansile playbook:
  ansible-playbook playbook.yml -K
 
 ```
+
+Configure the Mac for better user experience:
+
+1. Open Several Desktops (~7) on Your Machine
+2. Go To Keyboard Settings > Shortcuts > Mission Control
+3. Expand Mission Control and Turn On Shortcuts for Switching Spaces 1-7 with “Ctrl + # Of Space”
+4. Go to System Settings > Accessibility > Display
+5. Turn On Reduce Motion
+6. Go To System Settings > Desktop & Dock > Mission Control
+7. Turn off “Automatically Rearrange Spaces Based On Most Recent Use”
+8. Keep “Displays Have Separate Spaces” turned on here
