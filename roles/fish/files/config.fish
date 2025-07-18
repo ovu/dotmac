@@ -61,6 +61,9 @@ end
 
 register_custom_bindings
 
+# configure zoxide
+zoxide init fish | source
+
 
 # eval (gdircolors ~/.dircolors/dircolors/dircolors.256dark)
 
