@@ -55,3 +55,21 @@ Configure the Mac for better user experience:
 6. Go To System Settings > Desktop & Dock > Mission Control
 7. Turn off “Automatically Rearrange Spaces Based On Most Recent Use”
 8. Keep “Displays Have Separate Spaces” turned on here
+
+Configure key repeating for vim in VsCode/Cursor:
+
+```bash
+# For VSCode
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+# For VSCode Insiders
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+
+# For VSCodium
+defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
+
+# To enable global key-repeat
+# this is helpful if you're using Vim in a PWA like code-server
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+```
