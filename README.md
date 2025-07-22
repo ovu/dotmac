@@ -73,3 +73,10 @@ defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 ```
+
+Configure Keyboard in Mac for better key repeating experience:
+
+1. Open System Settings
+2. Select Keyboard
+3. Set Key repeat rate: Fast
+4. Set Delay until repeat: Short
