@@ -24,6 +24,8 @@ DEV_PACKAGES:
   - zoxide                  # better cd
   - gnupg                   # gpg tool for security
   - git-crypt               # for encrypting git content 
+  - age                     # Age (Age Is Another Encryption tool) is a simple, modern, and secure 
+  - sops                    # sops is a command-line tool for managing secrets
 
 
 
