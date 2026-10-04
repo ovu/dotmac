@@ -13,7 +13,6 @@ DEV_PACKAGES:
   - autossh                 # Monitors and restart ssh sessions
   - htop                    # Process viewwer real time
   - maven
-  - "koekeishiya/formulae/skhd"
   - jq                      # json parson, used by skhd scripts
   - coreutils               # installs gls, a ls with colors
   - ripgrep                 # used in neovim
@@ -23,13 +22,15 @@ DEV_PACKAGES:
   - eza                     # better ls
   - bat                     # better cat  
   - zoxide                  # better cd
+  - gnupg                   # gpg tool for security
+  - git-crypt               # for encrypting git content 
 
 
 
 DEV_CASK_PACKAGES:
   - docker             
   - karabiner-elements      # keyboard automation for mac
-  - kitty                   # GNU based terminal emulator
+  - ghostty                 # terminal emulator
 
 USER_PACKAGES:
   - ffmpeg                  # required by youtube-dl to convert audio to mp3

@@ -6,11 +6,22 @@
   homebrew_tap:
     name: coursier/formulas
 
+- name: Clean outdated x86 coursier launcher cache
+  file:
+    path: "{{ HOME_DIR }}/Library/Application Support/Coursier/bin/{{ item }}"
+    state: absent
+  loop:
+    - cs
+    - .cs.aux
+    - scala-cli
+    - .scala-cli.aux
+
 - name: Install coursier
   homebrew:
     name: coursier/formulas/coursier
-    state: present
-
+    state: latest
+    install_options:
+      - without-shell-completions
 
 - name: setup coursier
-  shell: "cs setup"
+  shell: "cs setup -y"
